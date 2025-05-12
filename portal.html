@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSD Student Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    body { background-color: #000; }
+    .glow-text { text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="text-white font-sans">
+
+<!-- Login Screen -->
+<div id="login-screen" class="min-h-screen flex flex-col justify-center items-center">
+  <h1 class="text-4xl font-bold glow-text mb-6">BSD Student Login</h1>
+  <form id="login-form" class="bg-gray-800 p-6 rounded-xl glow-box space-y-4 w-full max-w-sm">
+    <input type="text" id="student-id" placeholder="Student ID" class="w-full p-2 rounded bg-gray-700" required>
+    <input type="password" id="student-pass" placeholder="Password" class="w-full p-2 rounded bg-gray-700" required>
+    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 p-2 rounded font-bold">Login</button>
+  </form>
+</div>
+
+<!-- Dashboard -->
+<div id="dashboard" class="hidden min-h-screen">
+  <header class="py-6 text-center">
+    <h1 class="text-5xl font-bold glow-text">Welcome, <span id="student-name"></span></h1>
+    <p class="text-gray-400">BSD Public School Student Portal</p>
+    <button onclick="logout()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded mt-4">Logout</button>
+  </header>
+
+  <section class="px-6 py-10 max-w-4xl mx-auto text-center">
+    <div class="bg-gray-800 p-6 rounded-xl glow-box space-y-4">
+      <h2 class="text-2xl font-bold glow-text">Profile Information</h2>
+      <p id="profile-grade" class="text-gray-400"></p>
+      <p id="profile-roll" class="text-gray-400"></p>
+    </div>
+  </section>
+
+  <section class="px-6 py-10 max-w-4xl mx-auto text-center">
+    <div class="bg-gray-800 p-6 rounded-xl glow-box space-y-4">
+      <h2 class="text-2xl font-bold glow-text">Result Card</h2>
+      <div id="result-card" class="text-gray-400 space-y-2"></div>
+    </div>
+  </section>
+
+  <footer class="text-center py-8 border-t border-gray-800 text-sm text-gray-500">
+    © 2025 BSD Public School. All Rights Reserved.
+  </footer>
+</div>
+
+<script>
+const loginForm = document.getElementById("login-form");
+const loginScreen = document.getElementById("login-screen");
+const dashboard = document.getElementById("dashboard");
+const studentName = document.getElementById("student-name");
+const profileGrade = document.getElementById("profile-grade");
+const profileRoll = document.getElementById("profile-roll");
+const resultCard = document.getElementById("result-card");
+
+let students = JSON.parse(localStorage.getItem("bsd_students")) || [];
+
+loginForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const id = document.getElementById("student-id").value.trim();
+  const pass = document.getElementById("student-pass").value.trim();
+
+  const student = students.find(s => s.username === id && s.password === pass);
+
+  if (student) {
+    loginScreen.classList.add("hidden");
+    dashboard.classList.remove("hidden");
+
+    studentName.innerText = student.name;
+    profileGrade.innerText = "Grade: " + student.grade;
+    profileRoll.innerText = "Roll No: " + student.roll;
+
+    resultCard.innerHTML = `
+      <p>Math: ${student.marks?.Math ?? "N/A"}</p>
+      <p>Science: ${student.marks?.Science ?? "N/A"}</p>
+      <p>English: ${student.marks?.English ?? "N/A"}</p>
+    `;
+  } else {
+    alert("Invalid ID or Password.");
+  }
+});
+
+function logout() {
+  dashboard.classList.add("hidden");
+  loginScreen.classList.remove("hidden");
+  loginForm.reset();
+}
+
+ScrollReveal().reveal('section, header', {
+  distance: '30px',
+  duration: 800,
+  easing: 'ease-in-out',
+  origin: 'bottom',
+  interval: 100
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BSD Public School | Digital Access</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .glow-text {
+      text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 30px #00f7ff;
+    }
+    .glow-red {
+      text-shadow: 0 0 5px #ff0000,
+                   0 0 10px #ff0000,
+                   0 0 20px #ff0000,
+                   0 0 40px #ff0000;
+    }
+    body {
+      background-color: #000000;
+    }
+    .access-btn {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .access-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <header class="text-center py-10">
+    <h1 class="text-5xl font-bold tracking-wide glow-text">BSD Public School</h1>
+    <p class="text-xl font-bold glow-red">Digital Access Portal</p>
+    <nav class="mt-4 text-sm text-white-400 space-x-4">
+      <a href="https://taimiya-creator.github.io/bsdps/" class="hover:text-white">← Back to Home</a>
+    </nav>
+  </header>
+
+  <!-- E-Learning Redirect Button -->
+  <section id="e-learning" class="px-6 py-12 max-w-6xl mx-auto text-center">
+    <div class="bg-gray-800 rounded-xl p-8 shadow-2xl">
+      <h2 class="text-3xl font-semibold mb-6 glow-text">E-Learning</h2>
+      <p class="text-gray-300 mb-6">Access interactive lessons and study materials.</p>
+      <a href="https://taimiya-creator.github.io/godlike/class8" 
+         class="access-btn inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg">
+        Launch E-Learning →
+      </a>
+    </div>
+  </section>
+
+  <!-- Student Portal Redirect Button -->
+  <section id="student-portal" class="px-6 py-12 max-w-6xl mx-auto text-center">
+    <div class="bg-gray-800 rounded-xl p-8 shadow-2xl">
+      <h2 class="text-3xl font-semibold mb-6 glow-text">Student Portal</h2>
+      <p class="text-gray-300 mb-6">View grades, attendance, and assignments.</p>
+      <a href="https://taimiya-creator.github.io/bsdps/portal" 
+         class="access-btn inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-lg">
+        Go to Student Portal →
+      </a>
+    </div>
+  </section>
+
+  <!-- Admin Login Redirect Button -->
+  <section id="admin-login" class="px-6 py-12 max-w-6xl mx-auto text-center">
+    <div class="bg-gray-800 rounded-xl p-8 shadow-2xl">
+      <h2 class="text-3xl font-semibold mb-6 glow-text">Admin Login</h2>
+      <p class="text-gray-300 mb-6">Faculty and staff access only.</p>
+      <a href="https://taimiya-creator.github.io/bsdps/admin" 
+         class="access-btn inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg text-lg">
+        Go to Admin Portal →
+      </a>
+    </div>
+  </section>
+
+  <footer class="text-center py-8 border-t border-gray-800 bg-gray-950">
+    <p class="text-sm text-gray-500">© 2025 BSD Public School. All Rights Reserved.<br>Coded By ZENOVA(TAIMIYA)</p>
+  </footer>
+
+  <script>
+    ScrollReveal().reveal('section', {
+      distance: '30px',
+      duration: 1000,
+      easing: 'ease-in-out',
+      origin: 'bottom',
+      interval: 200
+    });
+  </script>
+</body>
+</html>
