@@ -29,7 +29,7 @@ export default function Home() {
                 <Link href="/apply">Apply Now <ArrowRight className="ml-2" /></Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="#">Learn More</Link>
+                <Link href="/about">Learn More</Link>
               </Button>
             </div>
           </div>

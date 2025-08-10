@@ -18,11 +18,11 @@ function Header() {
           <span>BSD Public School</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <Link href="#" className="text-foreground/80 hover:text-foreground transition-colors">About</Link>
-          <Link href="#" className="text-foreground/80 hover:text-foreground transition-colors">Academics</Link>
+          <Link href="/about" className="text-foreground/80 hover:text-foreground transition-colors">About</Link>
+          <Link href="/academics" className="text-foreground/80 hover:text-foreground transition-colors">Academics</Link>
           <Link href="/apply" className="text-foreground/80 hover:text-foreground transition-colors">Admissions</Link>
-          <Link href="#" className="text-foreground/80 hover:text-foreground transition-colors">Student Life</Link>
-          <Link href="#" className="text-foreground/80 hover:text-foreground transition-colors">Contact</Link>
+          <Link href="/student-life" className="text-foreground/80 hover:text-foreground transition-colors">Student Life</Link>
+          <Link href="/contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</Link>
         </nav>
       </div>
     </header>
@@ -45,6 +45,8 @@ function Footer() {
               <li><Link href="/about" className="hover:underline">About Us</Link></li>
               <li><Link href="/apply" className="hover:underline">Admissions</Link></li>
               <li><Link href="/academics" className="hover:underline">Academics</Link></li>
+               <li><Link href="/student-life" className="hover:underline">Student Life</Link></li>
+              <li><Link href="/contact" className="hover:underline">Contact</Link></li>
             </ul>
           </div>
            <div>

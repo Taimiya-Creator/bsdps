@@ -1,0 +1,114 @@
+import Image from 'next/image';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Users, Target, Eye } from 'lucide-react';
+
+export default function AboutPage() {
+  return (
+    <div className="bg-background text-foreground">
+      <section className="py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">About BSD Public School</h1>
+            <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl">A Tradition of Excellence, A Future of Innovation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-24 lg:py-32 bg-secondary">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter">Our History</h2>
+              <p className="text-muted-foreground">
+                Founded in 1958 in Guraini, Jaunpur, BSD Public School has grown from a small community school into a leading educational institution. Our journey has been one of relentless dedication to academic excellence and the holistic development of our students. We are proud of our rich heritage and the thousands of successful alumni who have passed through our halls.
+              </p>
+              <p className="text-muted-foreground">
+                We continue to build on this legacy by embracing modern teaching methodologies and fostering an environment of curiosity and lifelong learning.
+              </p>
+            </div>
+            <Image
+              src="https://placehold.co/600x400.png"
+              alt="School building"
+              width={600}
+              height={400}
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
+              data-ai-hint="school building"
+            />
+          </div>
+        </div>
+      </section>
+      
+      <section className="py-12 md:py-24 lg:py-32">
+        <div className="container px-4 md:px-6">
+          <div className="grid gap-8 md:grid-cols-3">
+            <Card>
+              <CardHeader className="flex flex-row items-center gap-4">
+                <Target className="w-8 h-8 text-primary" />
+                <CardTitle>Our Mission</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">To provide a nurturing and challenging environment that empowers students to reach their full potential academically, socially, and emotionally.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-center gap-4">
+                <Eye className="w-8 h-8 text-primary" />
+                <CardTitle>Our Vision</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">To be a center of educational excellence, preparing students to become compassionate, knowledgeable, and responsible global citizens.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader className="flex flex-row items-center gap-4">
+                <Users className="w-8 h-8 text-primary" />
+                <CardTitle>Our Values</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">We value integrity, respect, collaboration, and a passion for learning. These principles guide all our interactions and decisions.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 md:py-24 lg:py-32 bg-secondary">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12">Meet Our Leadership</h2>
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Card className="text-center">
+                    <CardHeader>
+                         <Image src="https://placehold.co/200x200.png" alt="Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                        <CardTitle>Dr. Evelyn Reed</CardTitle>
+                         <p className="text-muted-foreground">Principal</p>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-muted-foreground text-sm">With over 20 years of experience in educational leadership, Dr. Reed is dedicated to fostering a culture of academic excellence and innovation.</p>
+                    </CardContent>
+                </Card>
+                <Card className="text-center">
+                    <CardHeader>
+                        <Image src="https://placehold.co/200x200.png" alt="Vice Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                        <CardTitle>Mr. Samuel Green</CardTitle>
+                        <p className="text-muted-foreground">Vice Principal</p>
+                    </CardHeader>
+                    <CardContent>
+                        <p className="text-muted-foreground text-sm">Mr. Green oversees student affairs and curriculum development, ensuring a supportive and effective learning environment for all.</p>
+                    </CardContent>
+                </Card>
+                <Card className="text-center">
+                    <CardHeader>
+                         <Image src="https://placehold.co/200x200.png" alt="Head of Admissions" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                        <CardTitle>Ms. Clara Evans</CardTitle>
+                         <p className="text-muted-foreground">Head of Admissions</p>
+                    </CardHeader>
+                    <CardContent>
+                         <p className="text-muted-foreground text-sm">Ms. Evans is passionate about connecting with new families and guiding them through the admissions process at BSD Public School.</p>
+                    </CardContent>
+                </Card>
+             </div>
+          </div>
+        </section>
+    </div>
+  );
+}
