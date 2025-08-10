@@ -19,7 +19,7 @@ export default function Home() {
           />
           <div className="relative z-10 bg-black/50 p-8 rounded-lg">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
-              Welcome to Springfield High
+              Welcome to BSD Public School
             </h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl">
               Nurturing Tomorrow's Leaders Through Excellence in Education.
@@ -41,7 +41,7 @@ export default function Home() {
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Our School</h2>
                 <p className="text-muted-foreground md:text-xl">
-                  Springfield High has been a beacon of learning and community since 1958. We are dedicated to providing a supportive and challenging environment where students can thrive academically, creatively, and personally.
+                  BSD Public School has been a beacon of learning and community since 1958. We are dedicated to providing a supportive and challenging environment where students can thrive academically, creatively, and personally.
                 </p>
                  <p className="text-muted-foreground md:text-xl">
                   Our experienced faculty are leaders in their fields, committed to inspiring a passion for lifelong learning in every student.

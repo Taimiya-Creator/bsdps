@@ -6,7 +6,7 @@ export default function ApplyPage() {
       <div className="w-full max-w-4xl mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold font-headline text-foreground">
-            School Admission Application
+            BSD Public School Admission Application
           </h1>
           <p className="text-muted-foreground mt-2">
             Your journey to excellence starts here. Please fill out the form below.

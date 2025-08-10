@@ -5,8 +5,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'SchoolApply',
-  description: 'Admission page for your school',
+  title: 'BSD Public School',
+  description: 'Admission page for BSD Public School',
 };
 
 function Header() {
@@ -15,7 +15,7 @@ function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
           <School className="h-6 w-6 text-primary" />
-          <span>Springfield High</span>
+          <span>BSD Public School</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           <Link href="#" className="text-foreground/80 hover:text-foreground transition-colors">About</Link>
@@ -35,9 +35,9 @@ function Footer() {
       <div className="container mx-auto py-8 px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-2">Springfield High</h3>
-            <p className="text-sm">123 Main Street, Anytown, USA</p>
-            <p className="text-sm">contact@springfieldhigh.edu</p>
+            <h3 className="text-lg font-semibold mb-2">BSD Public School</h3>
+            <p className="text-sm">Guraini, Jaunpur</p>
+            <p className="text-sm">contact@bsdpublicschool.edu</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>
@@ -55,7 +55,7 @@ function Footer() {
           </div>
         </div>
         <div className="border-t mt-8 pt-4 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} Springfield High. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BSD Public School. All rights reserved.</p>
         </div>
       </div>
     </footer>
