@@ -10,7 +10,7 @@ export default function Home() {
       <main className="flex-1">
         <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
           <Image
-            src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/12/img-20241130-wa0023886858354709062583.jpg"
+            src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/12/image_editor_output_image1175559294-17330529511767410884181698057418.png"
             alt="School Campus"
             layout="fill"
             objectFit="cover"
@@ -105,7 +105,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/12/img-20241130-wa00108512621830963700095.jpg" alt="Student Life 1" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="students classroom" />
                <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2025/01/img-20250126-wa01086560046345694459814.jpg" alt="Student Life 2" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="school event" />
-                <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114502-1.jpg" alt="Music class" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="music class" />
+                <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/12/image_editor_output_image1175559294-17330529511767410884181698057418.png" alt="Student Life 3" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="school event" />
                  <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114328-1.jpg" alt="Library" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="school library" />
                   <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114349-1.jpg" alt="Art class" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="art class" />
                    <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2025/01/riyan_20250126_1000473806793646282110540542.jpg" alt="Graduation" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="student graduation" />
