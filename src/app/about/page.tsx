@@ -3,12 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Target, Eye, BookOpen, Star } from 'lucide-react';
 
 const faculty = [
-  { name: "Mr. John Doe", subject: "Mathematics", qualification: "M.Sc. in Mathematics" },
-  { name: "Mrs. Jane Smith", subject: "Science", qualification: "M.Sc. in Physics" },
-  { name: "Mr. Alex Johnson", subject: "English", qualification: "M.A. in English Literature" },
-  { name: "Ms. Sarah Williams", subject: "Social Studies", qualification: "M.A. in History" },
-  { name: "Mr. David Brown", subject: "Computer Science", qualification: "M.C.A." },
-  { name: "Ms. Emily Jones", subject: "Hindi", qualification: "M.A. in Hindi" },
+  { name: "Mr. Ramakant Sir", subject: "Mathematics", qualification: "M.Sc. in Mathematics" },
+  { name: "Mr. Bobby Kumar", subject: "Science", qualification: "M.Sc. in Physics" },
+  { name: "Mr. Amit Shukla", subject: "English", qualification: "M.A. in English Literature" },
+  { name: "Mr. Deepak Yadav", subject: "Social Studies", qualification: "M.A. in History" },
+  { name: "Mr. Abbas Haider", subject: "Computer Science", qualification: "M.C.A." },
+  { name: "Ms. Priti Mam", subject: "Hindi", qualification: "M.A. in Hindi" },
 ]
 
 export default function AboutPage() {
@@ -29,7 +29,7 @@ export default function AboutPage() {
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter">Our History</h2>
               <p className="text-muted-foreground">
-                Founded in 1958 in Guraini, Jaunpur, BSD Public School has grown from a small community school into a leading educational institution. Our journey has been one of relentless dedication to academic excellence and the holistic development of our students. We are proud of our rich heritage and the thousands of successful alumni who have passed through our halls.
+                Founded in 2018 in Guraini, Jaunpur, BSD Public School has grown from a small community school into a leading educational institution. Our journey has been one of relentless dedication to academic excellence and the holistic development of our students. We are proud of our rich heritage and the thousands of successful alumni who have passed through our halls.
               </p>
               <p className="text-muted-foreground">
                 Affiliated with CBSE since 2018, we continue to build on this legacy by embracing modern teaching methodologies and fostering an environment of curiosity and lifelong learning.
@@ -79,7 +79,7 @@ export default function AboutPage() {
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Card className="text-center">
                     <CardHeader>
-                        <CardTitle>Smt. Asha Singh</CardTitle>
+                        <CardTitle>Mr. Sashank Sir</CardTitle>
                          <p className="text-muted-foreground">Principal</p>
                     </CardHeader>
                     <CardContent>
@@ -88,20 +88,20 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                        <CardTitle>Anushka Singh</CardTitle>
+                        <CardTitle>Booby Sie</CardTitle>
                         <p className="text-muted-foreground">Vice Principal</p>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-muted-foreground text-sm">Anushka Singh oversees student affairs and curriculum development, ensuring a supportive and effective learning environment for all.</p>
+                        <p className="text-muted-foreground text-sm">Bobby Sir oversees student affairs and curriculum development, ensuring a supportive and effective learning environment for all.</p>
                     </CardContent>
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                        <CardTitle>Riyan Khan</CardTitle>
+                        <CardTitle>Sabajit Sir</CardTitle>
                          <p className="text-muted-foreground">Director</p>
                     </CardHeader>
                     <CardContent>
-                         <p className="text-muted-foreground text-sm">Riyan Khan provides strategic direction and oversight, ensuring the school's long-term success and commitment to its founding values.</p>
+                         <p className="text-muted-foreground text-sm">Sabajit Sir provides strategic direction and oversight, ensuring the school's long-term success and commitment to its founding values.</p>
                     </CardContent>
                 </Card>
              </div>
