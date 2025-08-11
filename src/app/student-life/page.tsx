@@ -53,12 +53,12 @@ export default function StudentLifePage() {
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12">Campus Moments</h2>
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114400-1.jpg" alt="Sports day" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="students sports" />
-            <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114434-1.jpg" alt="Science fair" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="science fair" />
-            <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114502-1.jpg" alt="Music class" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="music class" />
-            <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114328-1.jpg" alt="Library" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="school library" />
-            <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114349-1.jpg" alt="Art class" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="art class" />
-            <Image src="https://bsdpublic.files.wordpress.com/2025/01/riyan_20250126_1000473806793646282110540542.jpg" alt="School event" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="school event" />
+             <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/12/img-20241130-wa00108512621830963700095.jpg" alt="Student Life 1" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="students classroom" />
+             <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2025/01/img-20250126-wa01086560046345694459814.jpg" alt="Student Life 2" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="school event" />
+             <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/12/image_editor_output_image1175559294-17330529511767410884181698057418.png" alt="Student Life 3" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="school event" />
+             <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/12/img-20241130-wa00191071599275774132406.jpg" alt="Student Life 4" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="school event" />
+             <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114349-1.jpg" alt="Art class" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="art class" />
+             <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2025/01/riyan_20250126_1000473806793646282110540542.jpg" alt="Graduation" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="student graduation" />
           </div>
         </div>
       </section>
