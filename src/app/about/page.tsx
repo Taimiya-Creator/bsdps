@@ -3,12 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Target, Eye, BookOpen, Star } from 'lucide-react';
 
 const faculty = [
-  { name: "Mr. John Doe", subject: "Mathematics", qualification: "M.Sc. in Mathematics", image: "https://placehold.co/128x128.png", hint: "person portrait" },
-  { name: "Mrs. Jane Smith", subject: "Science", qualification: "M.Sc. in Physics", image: "https://placehold.co/128x128.png", hint: "person portrait" },
-  { name: "Mr. Alex Johnson", subject: "English", qualification: "M.A. in English Literature", image: "https://placehold.co/128x128.png", hint: "person portrait" },
-  { name: "Ms. Sarah Williams", subject: "Social Studies", qualification: "M.A. in History", image: "https://placehold.co/128x128.png", hint: "person portrait" },
-  { name: "Mr. David Brown", subject: "Computer Science", qualification: "M.C.A.", image: "https://placehold.co/128x128.png", hint: "person portrait" },
-  { name: "Ms. Emily Jones", subject: "Hindi", qualification: "M.A. in Hindi", image: "https://placehold.co/128x128.png", hint: "person portrait" },
+  { name: "Mr. John Doe", subject: "Mathematics", qualification: "M.Sc. in Mathematics", image: "https://placehold.co/400x400.png", hint: "person portrait" },
+  { name: "Mrs. Jane Smith", subject: "Science", qualification: "M.Sc. in Physics", image: "https://placehold.co/400x400.png", hint: "person portrait" },
+  { name: "Mr. Alex Johnson", subject: "English", qualification: "M.A. in English Literature", image: "https://placehold.co/400x400.png", hint: "person portrait" },
+  { name: "Ms. Sarah Williams", subject: "Social Studies", qualification: "M.A. in History", image: "https://placehold.co/400x400.png", hint: "person portrait" },
+  { name: "Mr. David Brown", subject: "Computer Science", qualification: "M.C.A.", image: "https://placehold.co/400x400.png", hint: "person portrait" },
+  { name: "Ms. Emily Jones", subject: "Hindi", qualification: "M.A. in Hindi", image: "https://placehold.co/400x400.png", hint: "person portrait" },
 ]
 
 export default function AboutPage() {
@@ -107,7 +107,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                         <Image src="https://bsdpublic.files.wordpress.com/2025/01/riyan_20250126_0823032491923148019771169432.jpg" alt="Director" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                         <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2025/01/riyan_20250126_0823032491923148019771169432.jpg" alt="Director" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Riyan Khan</CardTitle>
                          <p className="text-muted-foreground">Director</p>
                     </CardHeader>
