@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { School, Briefcase, Menu } from 'lucide-react';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
@@ -49,6 +49,9 @@ function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
+              <SheetHeader className="sr-only">
+                <SheetTitle>Menu</SheetTitle>
+              </SheetHeader>
               <div className="grid gap-4 p-4">
                  <Link href="/" className="flex items-center gap-2 font-bold text-lg">
                   <School className="h-6 w-6 text-primary" />
