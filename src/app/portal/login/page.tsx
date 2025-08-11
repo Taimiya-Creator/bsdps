@@ -64,7 +64,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-[calc(100vh-12rem)] items-center justify-center bg-background p-4">
+    <div className="flex min-h-[calc(100vh-8rem)] items-center justify-center bg-background p-4">
       <Card className="mx-auto max-w-sm w-full">
         <CardHeader>
           <CardTitle className="text-2xl">Digital Portal Login</CardTitle>

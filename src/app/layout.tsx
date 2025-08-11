@@ -1,8 +1,10 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
-import { School, Briefcase } from 'lucide-react';
+import { School, Briefcase, Menu } from 'lucide-react';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'BSD Public School',
@@ -10,6 +12,14 @@ export const metadata: Metadata = {
 };
 
 function Header() {
+  const navLinks = [
+    { href: "/about", label: "About" },
+    { href: "/academics", label: "Academics" },
+    { href: "/apply", label: "Admissions" },
+    { href: "/student-life", label: "Student Life" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
@@ -18,16 +28,49 @@ function Header() {
           <span>BSD Public School</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <Link href="/about" className="text-foreground/80 hover:text-foreground transition-colors">About</Link>
-          <Link href="/academics" className="text-foreground/80 hover:text-foreground transition-colors">Academics</Link>
-          <Link href="/apply" className="text-foreground/80 hover:text-foreground transition-colors">Admissions</Link>
-          <Link href="/student-life" className="text-foreground/80 hover:text-foreground transition-colors">Student Life</Link>
-          <Link href="/contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</Link>
-          <Link href="/portal/login" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors">
-            <Briefcase className="h-4 w-4" />
-            Digital Portal
-          </Link>
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="text-foreground/80 hover:text-foreground transition-colors">
+              {link.label}
+            </Link>
+          ))}
+          <Button asChild>
+            <Link href="/portal/login" className="flex items-center gap-2">
+              <Briefcase className="h-4 w-4" />
+              Digital Portal
+            </Link>
+          </Button>
         </nav>
+         <div className="md:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right">
+              <div className="grid gap-4 p-4">
+                 <Link href="/" className="flex items-center gap-2 font-bold text-lg">
+                  <School className="h-6 w-6 text-primary" />
+                  <span>BSD Public School</span>
+                </Link>
+                <nav className="grid gap-2 text-lg font-medium">
+                  {navLinks.map((link) => (
+                    <Link key={link.href} href={link.href} className="block px-2 py-1 text-foreground/80 hover:text-foreground transition-colors">
+                      {link.label}
+                    </Link>
+                  ))}
+                   <Button asChild className="mt-4">
+                    <Link href="/portal/login" className="flex items-center gap-2">
+                      <Briefcase className="h-5 w-5" />
+                      Digital Portal
+                    </Link>
+                  </Button>
+                </nav>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
@@ -51,6 +94,7 @@ function Footer() {
               <li><Link href="/academics" className="hover:underline">Academics</Link></li>
                <li><Link href="/student-life" className="hover:underline">Student Life</Link></li>
               <li><Link href="/contact" className="hover:underline">Contact</Link></li>
+               <li><Link href="/portal/login" className="hover:underline">Digital Portal</Link></li>
             </ul>
           </div>
            <div>
