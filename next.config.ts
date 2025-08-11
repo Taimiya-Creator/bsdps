@@ -21,6 +21,12 @@ const nextConfig: NextConfig = {
         hostname: 'bsdpublic.files.wordpress.com',
         port: '',
         pathname: '/**',
+      },
+       {
+        protocol: 'https',
+        hostname: 'bsdpublic.wordpress.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
