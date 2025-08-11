@@ -73,21 +73,21 @@ export default function ContactPage() {
                             <MapPin className="w-6 h-6 text-primary mt-1"/>
                             <div>
                                 <h3 className="font-semibold">Address</h3>
-                                <p className="text-muted-foreground">BSD Public School, Guraini, Jaunpur, Uttar Pradesh</p>
+                                <p className="text-muted-foreground">B S D Public School, Vill Guraini, Post Kushmaul, Tehsil-Mariahu, Jaunpur, Uttar Pradesh</p>
                             </div>
                         </div>
                          <div className="flex items-start gap-4">
                             <Mail className="w-6 h-6 text-primary mt-1"/>
                             <div>
                                 <h3 className="font-semibold">Email</h3>
-                                <p className="text-muted-foreground">contact@bsdpublicschool.edu</p>
+                                <p className="text-muted-foreground">principalbsd@gmail.com</p>
                             </div>
                         </div>
                          <div className="flex items-start gap-4">
                             <Phone className="w-6 h-6 text-primary mt-1"/>
                             <div>
                                 <h3 className="font-semibold">Phone</h3>
-                                <p className="text-muted-foreground">(+91) 123-456-7890</p>
+                                <p className="text-muted-foreground">(+91) 945-088-2555</p>
                             </div>
                         </div>
                     </CardContent>

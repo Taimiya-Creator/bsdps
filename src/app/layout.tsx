@@ -84,7 +84,7 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-2">BSD Public School</h3>
             <p className="text-sm">Guraini, Jaunpur</p>
-            <p className="text-sm">contact@bsdpublicschool.edu</p>
+            <p className="text-sm">principalbsd@gmail.com</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-2">Quick Links</h3>

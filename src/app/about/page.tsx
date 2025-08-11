@@ -23,11 +23,11 @@ export default function AboutPage() {
                 Founded in 1958 in Guraini, Jaunpur, BSD Public School has grown from a small community school into a leading educational institution. Our journey has been one of relentless dedication to academic excellence and the holistic development of our students. We are proud of our rich heritage and the thousands of successful alumni who have passed through our halls.
               </p>
               <p className="text-muted-foreground">
-                We continue to build on this legacy by embracing modern teaching methodologies and fostering an environment of curiosity and lifelong learning.
+                Affiliated with CBSE since 2018, we continue to build on this legacy by embracing modern teaching methodologies and fostering an environment of curiosity and lifelong learning.
               </p>
             </div>
             <Image
-              src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/bsd-2-1.jpg"
+              src="https://bsdpublic.files.wordpress.com/2024/07/bsd-2-1.jpg"
               alt="School building"
               width={600}
               height={400}
@@ -78,17 +78,17 @@ export default function AboutPage() {
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Card className="text-center">
                     <CardHeader>
-                         <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240212_114324-1.jpg" alt="Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
-                        <CardTitle>Dr. Evelyn Reed</CardTitle>
+                         <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240212_114324-1.jpg" alt="Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                        <CardTitle>Smt. Asha Singh</CardTitle>
                          <p className="text-muted-foreground">Principal</p>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-muted-foreground text-sm">With over 20 years of experience in educational leadership, Dr. Reed is dedicated to fostering a culture of academic excellence and innovation.</p>
+                        <p className="text-muted-foreground text-sm">With over 20 years of experience in educational leadership, our principal is dedicated to fostering a culture of academic excellence and innovation.</p>
                     </CardContent>
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                        <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240212_114227-1.jpg" alt="Vice Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                        <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240212_114227-1.jpg" alt="Vice Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Mr. Samuel Green</CardTitle>
                         <p className="text-muted-foreground">Vice Principal</p>
                     </CardHeader>
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                         <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240212_114256-1.jpg" alt="Head of Admissions" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                         <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240212_114256-1.jpg" alt="Head of Admissions" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Ms. Clara Evans</CardTitle>
                          <p className="text-muted-foreground">Head of Admissions</p>
                     </CardHeader>
