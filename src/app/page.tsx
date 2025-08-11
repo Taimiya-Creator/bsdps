@@ -48,12 +48,12 @@ export default function Home() {
                 </p>
               </div>
                <Image
-                  src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114328-1.jpg"
+                  src="https://bsdpublic.files.wordpress.com/2024/07/bsd-2-1.jpg"
                   alt="Students learning"
                   width={600}
                   height={400}
                   className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
-                  data-ai-hint="students learning"
+                  data-ai-hint="school building"
                 />
             </div>
           </div>

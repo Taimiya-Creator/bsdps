@@ -3,12 +3,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Target, Eye, BookOpen, Star } from 'lucide-react';
 
 const faculty = [
-  { name: "Mr. John Doe", subject: "Mathematics", qualification: "M.Sc. in Mathematics", image: "https://placehold.co/400x400.png", hint: "person portrait" },
-  { name: "Mrs. Jane Smith", subject: "Science", qualification: "M.Sc. in Physics", image: "https://placehold.co/400x400.png", hint: "person portrait" },
-  { name: "Mr. Alex Johnson", subject: "English", qualification: "M.A. in English Literature", image: "https://placehold.co/400x400.png", hint: "person portrait" },
-  { name: "Ms. Sarah Williams", subject: "Social Studies", qualification: "M.A. in History", image: "https://placehold.co/400x400.png", hint: "person portrait" },
-  { name: "Mr. David Brown", subject: "Computer Science", qualification: "M.C.A.", image: "https://placehold.co/400x400.png", hint: "person portrait" },
-  { name: "Ms. Emily Jones", subject: "Hindi", qualification: "M.A. in Hindi", image: "https://placehold.co/400x400.png", hint: "person portrait" },
+  { name: "Mr. John Doe", subject: "Mathematics", qualification: "M.Sc. in Mathematics" },
+  { name: "Mrs. Jane Smith", subject: "Science", qualification: "M.Sc. in Physics" },
+  { name: "Mr. Alex Johnson", subject: "English", qualification: "M.A. in English Literature" },
+  { name: "Ms. Sarah Williams", subject: "Social Studies", qualification: "M.A. in History" },
+  { name: "Mr. David Brown", subject: "Computer Science", qualification: "M.C.A." },
+  { name: "Ms. Emily Jones", subject: "Hindi", qualification: "M.A. in Hindi" },
 ]
 
 export default function AboutPage() {
@@ -25,7 +25,7 @@ export default function AboutPage() {
 
       <section className="py-12 md:py-24 lg:py-32 bg-secondary">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-1">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter">Our History</h2>
               <p className="text-muted-foreground">
@@ -35,14 +35,6 @@ export default function AboutPage() {
                 Affiliated with CBSE since 2018, we continue to build on this legacy by embracing modern teaching methodologies and fostering an environment of curiosity and lifelong learning.
               </p>
             </div>
-            <Image
-              src="https://bsdpublic.files.wordpress.com/2024/07/bsd-2-1.jpg"
-              alt="School building"
-              width={600}
-              height={400}
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-cover"
-              data-ai-hint="school building"
-            />
           </div>
         </div>
       </section>
@@ -87,7 +79,6 @@ export default function AboutPage() {
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Card className="text-center">
                     <CardHeader>
-                         <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240212_114324-1.jpg" alt="Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Smt. Asha Singh</CardTitle>
                          <p className="text-muted-foreground">Principal</p>
                     </CardHeader>
@@ -97,7 +88,6 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                        <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240212_114227-1.jpg" alt="Vice Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Anushka Singh</CardTitle>
                         <p className="text-muted-foreground">Vice Principal</p>
                     </CardHeader>
@@ -107,7 +97,6 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                         <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2025/01/riyan_20250126_0823032491923148019771169432.jpg" alt="Director" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Riyan Khan</CardTitle>
                          <p className="text-muted-foreground">Director</p>
                     </CardHeader>
@@ -125,16 +114,6 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {faculty.map((teacher) => (
                 <Card key={teacher.name} className="overflow-hidden">
-                  <CardHeader className="p-0">
-                    <Image
-                      src={teacher.image}
-                      alt={teacher.name}
-                      width={400}
-                      height={400}
-                      className="w-full h-48 object-cover"
-                      data-ai-hint={teacher.hint}
-                    />
-                  </CardHeader>
                   <CardContent className="p-4">
                     <h3 className="text-lg font-bold">{teacher.name}</h3>
                     <p className="text-primary font-medium">{teacher.subject}</p>
