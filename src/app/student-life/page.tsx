@@ -58,7 +58,7 @@ export default function StudentLifePage() {
             <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114502-1.jpg" alt="Music class" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="music class" />
             <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114328-1.jpg" alt="Library" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="school library" />
             <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114349-1.jpg" alt="Art class" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="art class" />
-            <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240126_114413-1.jpg" alt="Graduation" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="student graduation" />
+            <Image src="https://bsdpublic.files.wordpress.com/2025/01/riyan_20250126_1000473806793646282110540542.jpg" alt="School event" width={400} height={300} className="rounded-lg object-cover w-full aspect-[4/3]" data-ai-hint="school event" />
           </div>
         </div>
       </section>

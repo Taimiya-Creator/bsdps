@@ -89,21 +89,21 @@ export default function AboutPage() {
                 <Card className="text-center">
                     <CardHeader>
                         <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240212_114227-1.jpg" alt="Vice Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
-                        <CardTitle>Mr. Samuel Green</CardTitle>
+                        <CardTitle>Anushka Singh</CardTitle>
                         <p className="text-muted-foreground">Vice Principal</p>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-muted-foreground text-sm">Mr. Green oversees student affairs and curriculum development, ensuring a supportive and effective learning environment for all.</p>
+                        <p className="text-muted-foreground text-sm">Anushka Singh oversees student affairs and curriculum development, ensuring a supportive and effective learning environment for all.</p>
                     </CardContent>
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                         <Image src="https://bsdpublic.files.wordpress.com/2024/07/20240212_114256-1.jpg" alt="Head of Admissions" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
-                        <CardTitle>Ms. Clara Evans</CardTitle>
-                         <p className="text-muted-foreground">Head of Admissions</p>
+                         <Image src="https://bsdpublic.files.wordpress.com/2025/01/riyan_20250126_0823032491923148019771169432.jpg" alt="Director" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                        <CardTitle>Riyan Khan</CardTitle>
+                         <p className="text-muted-foreground">Director</p>
                     </CardHeader>
                     <CardContent>
-                         <p className="text-muted-foreground text-sm">Ms. Evans is passionate about connecting with new families and guiding them through the admissions process at BSD Public School.</p>
+                         <p className="text-muted-foreground text-sm">Riyan Khan provides strategic direction and oversight, ensuring the school's long-term success and commitment to its founding values.</p>
                     </CardContent>
                 </Card>
              </div>
