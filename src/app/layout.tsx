@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
 import Link from 'next/link';
-import { School } from 'lucide-react';
+import { School, Briefcase } from 'lucide-react';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
@@ -23,6 +23,10 @@ function Header() {
           <Link href="/apply" className="text-foreground/80 hover:text-foreground transition-colors">Admissions</Link>
           <Link href="/student-life" className="text-foreground/80 hover:text-foreground transition-colors">Student Life</Link>
           <Link href="/contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</Link>
+          <Link href="/portal/login" className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors">
+            <Briefcase className="h-4 w-4" />
+            Digital Portal
+          </Link>
         </nav>
       </div>
     </header>
@@ -58,6 +62,7 @@ function Footer() {
         </div>
         <div className="border-t mt-8 pt-4 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} BSD Public School. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground mt-2">Design by Zenova (Taimiya)</p>
         </div>
       </div>
     </footer>
