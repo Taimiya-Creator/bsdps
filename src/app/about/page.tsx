@@ -1,6 +1,15 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Users, Target, Eye } from 'lucide-react';
+import { Users, Target, Eye, BookOpen, Star } from 'lucide-react';
+
+const faculty = [
+  { name: "Mr. John Doe", subject: "Mathematics", qualification: "M.Sc. in Mathematics", image: "https://placehold.co/128x128.png", hint: "person portrait" },
+  { name: "Mrs. Jane Smith", subject: "Science", qualification: "M.Sc. in Physics", image: "https://placehold.co/128x128.png", hint: "person portrait" },
+  { name: "Mr. Alex Johnson", subject: "English", qualification: "M.A. in English Literature", image: "https://placehold.co/128x128.png", hint: "person portrait" },
+  { name: "Ms. Sarah Williams", subject: "Social Studies", qualification: "M.A. in History", image: "https://placehold.co/128x128.png", hint: "person portrait" },
+  { name: "Mr. David Brown", subject: "Computer Science", qualification: "M.C.A.", image: "https://placehold.co/128x128.png", hint: "person portrait" },
+  { name: "Ms. Emily Jones", subject: "Hindi", qualification: "M.A. in Hindi", image: "https://placehold.co/128x128.png", hint: "person portrait" },
+]
 
 export default function AboutPage() {
   return (
@@ -109,6 +118,34 @@ export default function AboutPage() {
              </div>
           </div>
         </section>
+
+        <section className="py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12">Our Esteemed Faculty</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {faculty.map((teacher) => (
+                <Card key={teacher.name} className="overflow-hidden">
+                  <CardHeader className="p-0">
+                    <Image
+                      src={teacher.image}
+                      alt={teacher.name}
+                      width={400}
+                      height={400}
+                      className="w-full h-48 object-cover"
+                      data-ai-hint={teacher.hint}
+                    />
+                  </CardHeader>
+                  <CardContent className="p-4">
+                    <h3 className="text-lg font-bold">{teacher.name}</h3>
+                    <p className="text-primary font-medium">{teacher.subject}</p>
+                    <p className="text-muted-foreground text-sm mt-1">{teacher.qualification}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
     </div>
   );
 }
