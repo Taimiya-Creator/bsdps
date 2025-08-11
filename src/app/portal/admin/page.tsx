@@ -22,66 +22,37 @@ type Student = {
   status: "verified" | "unverified";
 };
 
+const mockStudents: Student[] = [
+  { _id: "1", name: "John Doe", email: "john@example.com", status: "unverified" },
+  { _id: "2", name: "Jane Smith", email: "jane@example.com", status: "unverified" },
+];
+
 export default function AdminDashboard() {
   const [students, setStudents] = React.useState<Student[]>([]);
   const [loading, setLoading] = React.useState(true);
   const { toast } = useToast();
 
   const fetchPendingStudents = React.useCallback(async () => {
-    try {
-      setLoading(true);
-      const response = await fetch('/api/students/pending');
-      if (!response.ok) {
-        throw new Error('Failed to fetch students');
-      }
-      const data = await response.json();
-      const formattedData = data.map((student: any) => ({
-        ...student,
-        name: `${student.firstName} ${student.lastName}`,
-        id: student._id
-      }))
-      setStudents(formattedData);
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Could not fetch pending students.",
-        variant: "destructive",
-      });
-    } finally {
+    setLoading(true);
+    // Simulate API call
+    setTimeout(() => {
+      setStudents(mockStudents.filter(s => s.status === 'unverified'));
       setLoading(false);
-    }
-  }, [toast]);
+    }, 1000);
+  }, []);
 
   React.useEffect(() => {
     fetchPendingStudents();
   }, [fetchPendingStudents]);
 
   const handleVerification = async (studentId: string) => {
-    try {
-      const response = await fetch('/api/students/verify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ studentId }),
-      });
-
-      if (!response.ok) {
-        const data = await response.json();
-        throw new Error(data.message || 'Verification failed');
-      }
-
-      const student = students.find(s => s._id === studentId);
-      toast({
-        title: "Student Verified",
-        description: `${student?.name} has been successfully verified.`,
-      });
-      fetchPendingStudents(); // Refresh the list
-    } catch (error: any) {
-       toast({
-        title: "Error",
-        description: error.message,
-        variant: "destructive",
-      });
-    }
+    // Mock verification
+    const student = students.find(s => s._id === studentId);
+    toast({
+      title: "Student Verified",
+      description: `${student?.name} has been successfully verified.`,
+    });
+    setStudents(prev => prev.filter(s => s._id !== studentId));
   };
   
   return (
