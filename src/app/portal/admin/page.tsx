@@ -13,40 +13,77 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type Student = {
-  id: string;
+  _id: string;
   name: string;
   email: string;
   status: "verified" | "unverified";
 };
 
-const initialStudents: Student[] = [
-  { id: "1", name: "John Doe", email: "john.d@example.com", status: "unverified" },
-  { id: "2", name: "Jane Smith", email: "jane.s@example.com", status: "unverified" },
-  { id: "3", name: "Mike Johnson", email: "mike.j@example.com", status: "verified" },
-  { id: "4", name: "Emily Davis", email: "emily.d@example.com", status: "unverified" },
-];
-
 export default function AdminDashboard() {
-  const [students, setStudents] = React.useState<Student[]>(initialStudents);
+  const [students, setStudents] = React.useState<Student[]>([]);
+  const [loading, setLoading] = React.useState(true);
   const { toast } = useToast();
 
-  const handleVerification = (studentId: string) => {
-    setStudents((prevStudents) =>
-      prevStudents.map((student) =>
-        student.id === studentId ? { ...student, status: "verified" } : student
-      )
-    );
-    const student = students.find(s => s.id === studentId);
-    toast({
-      title: "Student Verified",
-      description: `${student?.name} has been successfully verified.`,
-    });
+  const fetchPendingStudents = React.useCallback(async () => {
+    try {
+      setLoading(true);
+      const response = await fetch('/api/students/pending');
+      if (!response.ok) {
+        throw new Error('Failed to fetch students');
+      }
+      const data = await response.json();
+      const formattedData = data.map((student: any) => ({
+        ...student,
+        name: `${student.firstName} ${student.lastName}`,
+        id: student._id
+      }))
+      setStudents(formattedData);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Could not fetch pending students.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
+  }, [toast]);
+
+  React.useEffect(() => {
+    fetchPendingStudents();
+  }, [fetchPendingStudents]);
+
+  const handleVerification = async (studentId: string) => {
+    try {
+      const response = await fetch('/api/students/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ studentId }),
+      });
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.message || 'Verification failed');
+      }
+
+      const student = students.find(s => s._id === studentId);
+      toast({
+        title: "Student Verified",
+        description: `${student?.name} has been successfully verified.`,
+      });
+      fetchPendingStudents(); // Refresh the list
+    } catch (error: any) {
+       toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
+    }
   };
   
-  const unverifiedStudents = students.filter(s => s.status === 'unverified');
-
   return (
     <div className="container mx-auto py-8 px-4 md:px-6">
       <h1 className="text-3xl font-bold mb-6">Admin Dashboard</h1>
@@ -68,9 +105,18 @@ export default function AdminDashboard() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {unverifiedStudents.length > 0 ? (
-                unverifiedStudents.map((student) => (
-                  <TableRow key={student.id}>
+              {loading ? (
+                Array.from({length: 3}).map((_, i) => (
+                   <TableRow key={i}>
+                      <TableCell><Skeleton className="h-5 w-32" /></TableCell>
+                      <TableCell><Skeleton className="h-5 w-48" /></TableCell>
+                      <TableCell><Skeleton className="h-6 w-20 rounded-full" /></TableCell>
+                      <TableCell className="text-right"><Skeleton className="h-8 w-16" /></TableCell>
+                   </TableRow>
+                ))
+              ) : students.length > 0 ? (
+                students.map((student) => (
+                  <TableRow key={student._id}>
                     <TableCell className="font-medium">{student.name}</TableCell>
                     <TableCell>{student.email}</TableCell>
                     <TableCell>
@@ -82,7 +128,7 @@ export default function AdminDashboard() {
                       {student.status === "unverified" && (
                         <Button
                           size="sm"
-                          onClick={() => handleVerification(student.id)}
+                          onClick={() => handleVerification(student._id)}
                         >
                           Verify
                         </Button>

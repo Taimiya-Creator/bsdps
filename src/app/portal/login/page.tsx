@@ -45,21 +45,40 @@ export default function LoginPage() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // This is a mock login.
-    // In a real app, you'd call your auth service here.
-    if (values.email === "admin@bsd.edu" && values.password === "admin") {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Login failed');
+      }
+
       toast({
-        title: "Admin Login Successful",
-        description: "Redirecting to admin dashboard...",
-      })
-      router.push("/portal/admin")
-    } else {
-       toast({
         title: "Login Successful",
-        description: "Redirecting to your portal...",
-      })
-      router.push("/portal/dashboard")
+        description: "Redirecting...",
+      });
+
+      // Redirect based on user role
+      if (data.user.role === 'admin') {
+        router.push("/portal/admin");
+      } else {
+        router.push("/portal/dashboard");
+      }
+
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
     }
   }
 
