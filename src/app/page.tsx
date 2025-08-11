@@ -10,7 +10,7 @@ export default function Home() {
       <main className="flex-1">
         <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white">
           <Image
-            src="https://placehold.co/1920x1080.png"
+            src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/bsd-2-1.jpg"
             alt="School Campus"
             layout="fill"
             objectFit="cover"
@@ -48,7 +48,7 @@ export default function Home() {
                 </p>
               </div>
                <Image
-                  src="https://placehold.co/600x400.png"
+                  src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240126_114328-1.jpg"
                   alt="Students learning"
                   width={600}
                   height={400}
@@ -103,12 +103,12 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12">Student Life</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Image src="https://placehold.co/400x300.png" alt="Sports day" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="students sports" />
-               <Image src="https://placehold.co/400x300.png" alt="Science fair" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="science fair" />
-                <Image src="https://placehold.co/400x300.png" alt="Music class" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="music class" />
-                 <Image src="https://placehold.co/400x300.png" alt="Library" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="school library" />
-                  <Image src="https://placehold.co/400x300.png" alt="Art class" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="art class" />
-                   <Image src="https://placehold.co/400x300.png" alt="Graduation" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="student graduation" />
+              <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240126_114400-1.jpg" alt="Sports day" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="students sports" />
+               <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240126_114434-1.jpg" alt="Science fair" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="science fair" />
+                <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240126_114502-1.jpg" alt="Music class" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="music class" />
+                 <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240126_114328-1.jpg" alt="Library" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="school library" />
+                  <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240126_114349-1.jpg" alt="Art class" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="art class" />
+                   <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240126_114413-1.jpg" alt="Graduation" width={400} height={300} className="rounded-lg object-cover" data-ai-hint="student graduation" />
             </div>
           </div>
         </section>

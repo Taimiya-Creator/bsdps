@@ -27,7 +27,7 @@ export default function AboutPage() {
               </p>
             </div>
             <Image
-              src="https://placehold.co/600x400.png"
+              src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/bsd-2-1.jpg"
               alt="School building"
               width={600}
               height={400}
@@ -78,7 +78,7 @@ export default function AboutPage() {
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Card className="text-center">
                     <CardHeader>
-                         <Image src="https://placehold.co/200x200.png" alt="Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                         <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240212_114324-1.jpg" alt="Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Dr. Evelyn Reed</CardTitle>
                          <p className="text-muted-foreground">Principal</p>
                     </CardHeader>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                        <Image src="https://placehold.co/200x200.png" alt="Vice Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                        <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240212_114227-1.jpg" alt="Vice Principal" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Mr. Samuel Green</CardTitle>
                         <p className="text-muted-foreground">Vice Principal</p>
                     </CardHeader>
@@ -98,7 +98,7 @@ export default function AboutPage() {
                 </Card>
                 <Card className="text-center">
                     <CardHeader>
-                         <Image src="https://placehold.co/200x200.png" alt="Head of Admissions" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
+                         <Image src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240212_114256-1.jpg" alt="Head of Admissions" width={128} height={128} className="rounded-full mx-auto mb-4 object-cover" data-ai-hint="person portrait" />
                         <CardTitle>Ms. Clara Evans</CardTitle>
                          <p className="text-muted-foreground">Head of Admissions</p>
                     </CardHeader>

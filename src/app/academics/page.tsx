@@ -7,7 +7,7 @@ export default function AcademicsPage() {
     <div className="bg-background text-foreground">
        <section className="relative w-full h-[50vh] flex items-center justify-center text-center text-white">
           <Image
-            src="https://placehold.co/1920x800.png"
+            src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/bsd-2-1.jpg"
             alt="Library"
             layout="fill"
             objectFit="cover"
@@ -89,7 +89,7 @@ export default function AcademicsPage() {
                 </p>
               </div>
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://bsdpublic.wordpress.com/wp-content/uploads/2024/07/20240126_114328-1.jpg"
                 alt="Teacher with students"
                 width={600}
                 height={400}
