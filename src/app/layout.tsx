@@ -34,7 +34,7 @@ function Header() {
             </Link>
           ))}
           <Button asChild>
-            <Link href="/portal/login" className="flex items-center gap-2">
+            <Link href="bsd-chat.vercel.app" className="flex items-center gap-2">
               <Briefcase className="h-4 w-4" />
               Digital Portal
             </Link>
@@ -64,7 +64,7 @@ function Header() {
                     </Link>
                   ))}
                    <Button asChild className="mt-4">
-                    <Link href="/portal/login" className="flex items-center gap-2">
+                    <Link href="bsd-chat.vercel.app" className="flex items-center gap-2">
                       <Briefcase className="h-5 w-5" />
                       Digital Portal
                     </Link>
@@ -97,7 +97,7 @@ function Footer() {
               <li><Link href="/academics" className="hover:underline">Academics</Link></li>
                <li><Link href="/student-life" className="hover:underline">Student Life</Link></li>
               <li><Link href="/contact" className="hover:underline">Contact</Link></li>
-               <li><Link href="/portal/login" className="hover:underline">Digital Portal</Link></li>
+               <li><Link href="bsd-chat.vercel.app" className="hover:underline">Digital Portal</Link></li>
             </ul>
           </div>
            <div>
